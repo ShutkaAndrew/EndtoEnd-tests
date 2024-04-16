@@ -16,4 +16,15 @@ test('Valid value', async({page})=> {
 
 
      })
+     test('dropdown displays', async({page}) =>{
+await page.goto('https://openweathermap.org/')
+const searchField =  page.getByPlaceholder('Search city')
+searchField.fill('Washington')
+await page.locator('button[type="submit"]').click()
+await expect(page.locator('ul.search-dropdown-menu')).toBeVisible()
+await page.getByText('Washington, US ').click()
+await expect(page.getByRole('heading', {name:'Washington, US'})).toBeVisible()
+
+
+     })
 })
