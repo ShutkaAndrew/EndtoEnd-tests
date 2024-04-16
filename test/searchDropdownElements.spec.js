@@ -16,7 +16,7 @@ test('Valid value', async({page})=> {
 
 
      })
-     test('dropdown displays', async({page}) =>{
+     test('dropdown Elements', async({page}) =>{
 await page.goto('https://openweathermap.org/')
 const searchField =  page.getByPlaceholder('Search city')
 searchField.fill('Washington')
