@@ -5,7 +5,7 @@ test.describe('Search field functionality', () =>{
          await page.goto('https://magento.softwaretestingboard.com/')
 
 test('Search box  availability on all pages'), async({page})=>{
-    await page.locator('')
+    await page.locator('li')
     
 }
 
